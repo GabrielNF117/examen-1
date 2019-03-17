@@ -1,0 +1,151 @@
+#fondo{
+    background-color: aquamarine;
+}
+#header{
+    background-color: darkcyan;
+    position: absolute;
+    width: 96%;
+    height: 20%;
+    border-radius: 10px;
+    padding-top: 10%;
+    padding-left: 3%;
+}
+#titulo{
+    font-family: Century;
+    font-size: 300%;
+    color: white;
+}
+#foto{
+    position: absolute;
+    width: 20%;
+    height: 90%;
+    top: 5.5%;
+    right: 8%;
+    border-radius: 8%;
+
+}
+#navegacion{
+    position: absolute;
+    top: 45%;
+    width: 20%;
+    height: 30%;
+    background-color: white;
+    border-radius: 5%;
+    border: solid;
+    border-color: darkcyan;
+    font-size: 150%;
+
+    text-align:start;
+}
+nav > a{
+    color: cornflowerblue;
+    text-decoration:none;
+    display:block;
+    padding:10px 20px;
+    font-family:Century;
+}
+#principal{
+
+    padding: 4% 7%;
+    font-family: Century;
+
+}
+#calendario{
+    padding: 4% 7%;
+    font-family: Century;
+}
+#principal:hover{
+    background-color: dodgerblue;
+    color: white;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+#calendario:hover{
+    background-color: dodgerblue;
+    color: white;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
+}
+#consulta{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    width: 50%;
+    height: 70%;
+    border-radius: 3%;
+    padding-top: 5%;
+    padding-left: 5%;
+    font-family: Century;
+}
+#vacio{
+    position: absolute;
+    height: 20%;
+    top: 195%;
+    width: 100%;
+}
+#mensaje{
+    position: absolute;
+    width: 80%;
+    height: 20%;
+    resize: none;
+    background-color: lightgray;
+    font-size: 80%;
+}
+#asunto{
+    left: 30%;
+    top: 20%;
+    resize: none;
+    font-family: Century;
+
+}
+#hora{
+    position: absolute;
+    top: 40%;
+    font-family: Century;
+    font-size: 90%;
+}
+#hor{
+
+    width: 70%;
+    height: 5%;
+
+}
+#fecha{
+    position: absolute;
+    top: 50%;
+    font-family: Century;
+}
+#doctor{
+    position: absolute;
+    top: 60%;
+    font-family: Century;
+}
+.boton{
+    position: absolute;
+    top:70%;
+    font-family: Century;
+    height: 5%;
+    width: 30%;
+    left: 35%;
+}
+
+#datepicker{
+    position: absolute;
+    top: 137%;
+    left: 5%;
+    width: 17%;
+    height: 29%;
+    background-color: #5FBA7D !important;
+    color: #ffffff !important;
+    padding-left: 2%;
+}
+#lis{
+    position: absolute;
+    background-color: white;
+    left: 5%;
+    top: 170%;
+    width: 70%;
+    height: 40%;
+    color: black;
+}

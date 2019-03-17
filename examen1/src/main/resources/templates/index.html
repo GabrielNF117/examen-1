@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link  href="/principal.css" th:href="@{/CSS/principal.css}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+    <title>Consultorio Médico</title>
+</head>
+<body id="fondo">
+
+<div id="header">
+    <p id="titulo">HOSPITAL LIFE</p>
+    <img src="/CSS/plantilla-logo-hospital-turquesa_1057-395 (2).jpg" id="foto"/>
+</div>
+
+<div id="lis">
+<h2>Lista de nombres</h2>
+
+<ol>
+    <li th:each="fila: ${lista}" th:text="${fila}" value="${lista}" id="list">
+    </li>
+</ol>
+</div>
+<p><div id="datepicker"></div></p>
+<script>
+
+    $( function() {
+
+
+        var eventDates = {};
+        eventDates[ new Date( '03/13/2019' )] = new Date( '03/13/2019' );
+        eventDates[ new Date( '03/25/2019' )] = new Date( '03/25/2019' );
+        eventDates[ new Date( '04/04/2019' )] = new Date( '04/04/2019' );
+        eventDates[ new Date( '04/09/2019' )] = new Date( '04/09/2019' );
+
+
+        $('#datepicker').datepicker({
+            beforeShowDay: function( date ) {
+                var highlight = eventDates[date];
+                if( highlight ) {
+                    return [true, "event", 'Consulta'];
+                } else {
+                    return [true, '', ''];
+                }
+            }
+
+        });
+
+
+    });
+</script>
+
+<form action="/add" method="post">
+<section id="consulta">
+    <label id="asunto">Asunto:  <br><textArea type="text" name="asunto" class="form-input" id="mensaje"></textArea></label>
+    <label id="hora" >Hora: <input type="time" name="hora" value="00:00:00" max="19:00:00" min="10:00:00" step="1" id="hor"></label>
+    <label id="fecha">Fecha: <input type="date" name="fecha"></label>
+    <label id="doctor">Doctor: <select name="doctor">
+        <option selected value="1" class="doctores">...</option>
+        <option value="Pedro Lopez Martinez">Pedro Lopez Martinez</option>
+        <option value="Maria Matinez Gonzalez">Maria Matinez Gonzalez</option>
+        <option value="Alberto Ruiz Jimenez">Alberto Ruiz Jimenez</option>
+    </select>
+    </label>
+    <input type="submit" value="Agendar Cita" class="boton">
+</section>
+</form>
+<div id="vacio">
+</div>
+
+</body>
+</html>
